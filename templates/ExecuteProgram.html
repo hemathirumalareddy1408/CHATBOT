@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Execute Python Program</title>
+</head>
+<body>
+    <h1>Upload Python file or paste code</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            <label for="codefile">Upload .py file:</label>
+            <input type="file" id="codefile" name="codefile" accept=".py" />
+        </div>
+        <div>
+            <label for="codearea">Or paste Python code:</label><br />
+            <textarea id="codearea" name="codearea" rows="15" cols="80"></textarea>
+        </div>
+        <div>
+            <button type="submit">Execute</button>
+        </div>
+    </form>
+</body>
+</html>
