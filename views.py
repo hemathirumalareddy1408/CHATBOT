@@ -40,7 +40,11 @@ def find_response(text):
 
 
 def index(request):
-    return render(request, 'index.html', {})
+    return render(request, 'TextChatbot.html', {})
+
+
+def text_chatbot(request):
+    return render(request, 'TextChatbot.html', {})
 
 
 def ChatData(request):
